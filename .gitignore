@@ -207,3 +207,7 @@ marimo/_lsp/
 __marimo__/
 
 .env
+
+# So I dont push up all lancedb transactions etc
+*.lance/
+*.lance/_transactions/
