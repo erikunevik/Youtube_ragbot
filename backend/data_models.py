@@ -14,3 +14,13 @@ class Article(LanceModel):
     filename: str = Field(description="the stem of the file i.e. without the suffix")
     content: str = embedding_model.SourceField()
     embedding: Vector(EMBEDDING_DIM) = embedding_model.VectorField()
+    
+
+class Prompt(BaseModel):
+    prompt: str = Field(escription="prompt from user, if empty consider it as missing")
+    
+class RagResponse(BaseModel):
+    filename: str = Field(description="filename of retrieved file without suffix")
+    filepath: str = Field(description="absolute path to the retrieved file") 
+    answer: str = Field(description="answer based on the retrieved file") 
+
