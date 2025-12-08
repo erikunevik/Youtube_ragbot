@@ -4,9 +4,11 @@ from lancedb.pydantic import LanceModel, Vector
 from dotenv import load_dotenv
 
 load_dotenv()
-embedding_model = get_registry().get("gemini-text").create(name="gemini-embedding-001")
+# embedding_model = get_registry().get("gemini-text").create(name="gemini-embedding-001")
+embedding_model = get_registry().get("openai").create(name="text-embedding-3-small")
 
-EMBEDDING_DIM = 3072
+
+EMBEDDING_DIM = 1536
 
 class Article(LanceModel):
     doc_id: str

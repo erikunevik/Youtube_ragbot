@@ -6,7 +6,7 @@ import lancedb
 vector_db = lancedb.connect(uri=VECTOR_DATABASE_PATH)
 
 rag_agent = Agent(
-    model="google-gla:gemini-2.5-flash",
+    model="openai:gpt-4.1",
     retries=2,
     system_prompt=(
     
