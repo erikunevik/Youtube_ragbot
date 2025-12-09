@@ -211,3 +211,17 @@ __marimo__/
 # So I dont push up all lancedb transactions etc
 *.lance/
 *.lance/_transactions/
+
+# Terraform
+terraform.tfvars
+*.tfvars.json
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Python
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
